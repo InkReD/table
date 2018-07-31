@@ -19,7 +19,7 @@ class App extends PureComponent {
                     <table className="table table-striped">
                         <thead>
                         <tr className='top'>
-                            <th>1</th>
+                            <th>2</th>
                             <th>ItemID</th>
                             <th>ProductID</th>
                             <th>List Price</th>
