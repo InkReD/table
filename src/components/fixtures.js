@@ -8,15 +8,15 @@ export default [
         "attribute": "Rattleless",
         "status": "P",
         "hidden":
-        [
-            {
-                "id": "1.1",
-                "orderID": "1004",
-                "quantity": "1",
-                "Price": "18.50",
-            }
-        ]
-},
+            [
+                {
+                    "id": "1.1",
+                    "orderID": "1004",
+                    "quantity": "1",
+                    "Price": "18.50",
+                }
+            ]
+    },
     {
         "id": "2",
         "itemId": "EST-13",
