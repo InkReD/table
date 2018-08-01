@@ -1,19 +1,19 @@
 var columns = [
     {
-        "id": "1",
-        "itemId": "EST-12",
-        "productId": "RP-SN-01",
-        "listPrice": "18.50",
-        "unitCost": "12.00",
-        "attribute": "Rattleless",
-        "status": "P",
-        "hidden":
+        id: "1",
+        itemId: "EST-12",
+        productId: "RP-SN-01",
+        istPrice: "18.50",
+        unitCost: "12.00",
+        attribute: "Rattleless",
+        status: "P",
+        hidden:
             [
                 {
-                    "id": "1.1",
-                    "orderID": "1004",
-                    "quantity": "1",
-                    "Price": "18.50",
+                    id: "1.1",
+                    orderID: "1004",
+                    quantity: "1",
+                    Price: "18.50",
                 }
             ]
     },
@@ -25,7 +25,7 @@ var columns = [
         "unitCost": "12.00",
         "attribute": "Rattleless",
         "status": "P",
-        "hidden":
+        hidden:
             [
                 {
                     "id": "1.1",
@@ -43,7 +43,7 @@ var columns = [
         "unitCost": "12.00",
         "attribute": "Rattleless",
         "status": "P",
-        "hidden":
+        hidden:
             [
                 {
                     "id": "1.1",
@@ -53,6 +53,9 @@ var columns = [
                 }
             ]
     }
+
+]
+var row = [
 
 ]
 export default columns

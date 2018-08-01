@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './tableStyle.css'
-import columns from './components/fixtures'
+import Rattle from './components/tableList'
 
 class Ter extends Component {
     state = {
@@ -25,7 +25,7 @@ class Ter extends Component {
     render() {
         const {isOpen, columns} = this.props
         const body = this.state.isOpen &&
-            <div className="table-responsive" style={{height: '100px', width: '350px', overflow: 'scroll'}}>
+            <div className="table-responsive" style={{height: '100px', width: '100%', overflow: 'scroll'}}>
                 <table className="table table-striped">
                     <tbody>
                     <tr>
@@ -34,12 +34,7 @@ class Ter extends Component {
                         <th>Quantity</th>
                         <th>Unit Price</th>
                     </tr>
-                    <tr>
-                        <td>{columns.hidden.id}</td>
-                        <td>{columns.hidden.orderId}</td>
-                        <td>{columns.hidden.quantity}</td>
-                        <td>{columns.hidden.Price}</td>
-                    </tr>
+                        <Rattle columns={columns[0].hidden[0]} />
                     </tbody>
                 </table>
             </div>
@@ -59,9 +54,7 @@ class Ter extends Component {
                 <td>{columns.status}</td>
             </tr>
             <tr>
-                <td style={{float: 'left'}}>{body}</td>
-
-
+                <td colspan="5">{body}</td>
             </tr>
             </tbody>
         )
