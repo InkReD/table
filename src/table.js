@@ -1,39 +1,71 @@
 import React, {Component} from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './tableStyle.css'
-class Article extends Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            count:0
-        }
+import columns from './components/fixtures'
+
+class Ter extends Component {
+    state = {
+        isOpen: false
     }
-    componentWillMount(){
-        console.log('----','mounting')
+    handleClick = () => {
+        console.log('---', 'clicked')
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
     }
-    componentWillUpdate(){
-        console.log('---','will update')
+
+    componentWillMount() {
+        console.log('----', 'mounting')
     }
+
+    componentWillUpdate() {
+        console.log('---', 'will update')
+    }
+
     render() {
-        const {article, isOpen, onButtonClick} = this.props
-        const body = isOpen
+        const {isOpen, columns} = this.props
+        const body = this.state.isOpen &&
+            <div className="table-responsive" style={{height: '100px', width: '350px', overflow: 'scroll'}}>
+                <table className="table table-striped">
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <th>Order ID</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                    </tr>
+                    <tr>
+                        <td>{columns.hidden.id}</td>
+                        <td>{columns.hidden.orderId}</td>
+                        <td>{columns.hidden.quantity}</td>
+                        <td>{columns.hidden.Price}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
         return (
             <tbody>
             <tr className="r">
                 <td>
-                    <button onClick={onButtonClick} className="btn btn-default">{isOpen ? '-':'+'}</button>
+                    <button onClick={this.handleClick}
+                            className="btn btn-default">{this.state.isOpen ? '-' : '+'}</button>
                 </td>
-                <td>{article.itemId}</td>
-                <td>{article.productId}</td>
-                <td>{article.listPrice}</td>
-                <td>{article.unitCost}</td>
-                <td>{article.attribute}</td>
-                <td>{article.status}</td>
+                <td>{columns.itemId}</td>
+                <td>{columns.productId}</td>
+                <td>{columns.listPrice}</td>
+                <td>{columns.unitCost}</td>
+                <td>{columns.attribute}</td>
+                <td>{columns.status}</td>
             </tr>
-            {body}
+            <tr>
+                <td style={{float: 'left'}}>{body}</td>
+
+
+            </tr>
             </tbody>
         )
     }
 }
 
-export default Article
+export default Ter

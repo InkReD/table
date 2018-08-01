@@ -1,9 +1,7 @@
 import React, {PureComponent} from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import TableList from './components/tableList'
-import Article from './table'
-import articles from './components/fixtures'
-
+import Ter from './table'
+import columns from './components/fixtures'
 
 
 class App extends PureComponent {
@@ -26,11 +24,10 @@ class App extends PureComponent {
                             <th>Status</th>
                         </tr>
                         </thead>
-                        <Article article={articles[0]}/>
-                        <TableList article={articles[0].hidden}/>
-                        <Article article={articles[1]}/>
-                        <Article article={articles[2]}/>
+                        <Ter columns={columns[0]}/>
+                        <Ter columns={columns[2]}/>
                     </table>
+
                 </div>
 
             </div>

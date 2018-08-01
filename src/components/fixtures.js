@@ -1,4 +1,4 @@
-export default [
+var columns = [
     {
         "id": "1",
         "itemId": "EST-12",
@@ -55,3 +55,4 @@ export default [
     }
 
 ]
+export default columns
